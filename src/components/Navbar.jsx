@@ -19,14 +19,14 @@ function Header() {
 
   return (
     <header className={`sticky mx-auto top-0 z-30 bg-orange-100 border-2 border-orange-200 transition-all ${header ? 'py-4 bg-orange-100 shadow-lg ' : 'py-6'} `}>
-      <div className="max-w-7xl mx-auto ">
+      <div className="mx-auto max-w-7xl ">
         {/* MobileNav */}
-        <div className='flex md:hidden justify-between px-4'>
-          <div href="/" className="text-primary  flex gap-1 items-center">
+        <div className='flex justify-between px-4 md:hidden'>
+          <div href="/" className="flex items-center gap-1 text-primary">
             <img src={chili} width={30} height={30} alt='chilli' />
-            <h1 className='text-red-500 font-bold text-xl '>
-              Spicy
-              <span className="text-gray-800 font-semibold">Bites</span>
+            <h1 className='text-xl font-bold text-red-500 '>
+              Food
+              <span className="font-semibold text-gray-800">Bites</span>
             </h1>
           </div>
           <div className='flex gap-8'>
@@ -39,7 +39,7 @@ function Header() {
         {mobileNavOpen && (
         <ul 
         onClick={()=> setMobileNavOpen(false)}
-        className='md:hidden p-4  bg-orange-100 rounded-lg font-semibold text-xl mt-2 flex flex-col gap-2 text-center'>
+        className='flex flex-col gap-2 p-4 mt-2 text-xl font-semibold text-center bg-orange-100 rounded-lg md:hidden'>
           <li to={'/'}>Home</li>
           <li to={'#menu'}>Menu</li>
           <li to={'#about'}>About</li>
@@ -50,22 +50,22 @@ function Header() {
         )}
 
         {/* computerNav */}
-        <div className='hidden md:flex justify-between items-center px-10 '>
-          <div href="/" className="text-primary font-semibold flex gap-1 items-center">
+        <div className='items-center justify-between hidden px-10 md:flex '>
+          <div href="/" className="flex items-center gap-1 font-semibold text-primary">
             <img src={chili} className='w-10'/>
-            <div className='text-red-500 text-xl font-bold'>
+            <div className='text-xl font-bold text-red-500'>
               Spicy
-              <span className="text-gray-800 font-semibold">Bites</span>
+              <span className="font-semibold text-gray-800">Bites</span>
             </div>
           </div>
           <div className='flex items-center gap-x-6'>
             {/* nav */}
-            <ul className="flex items-center cursor-pointer gap-8 text-black font-semibold">
-              <li className='hover:text-red-500 transition-all' to={'/'}>Home</li>
-              <li className='hover:text-red-500 transition-all' to={'#menu'}>Menu</li>
-              <li className='hover:text-red-500 transition-all' to={'#about'}>About</li>
-              <li className='hover:text-red-500 transition-all' to={'#contact'}>Contact</li>
-              <button className='bg-red-500 px-4 py-2 text-white rounded-lg'>Order Now</button>
+            <ul className="flex items-center gap-8 font-semibold text-black cursor-pointer">
+              <li className='transition-all hover:text-red-500' to={'/'}>Home</li>
+              <li className='transition-all hover:text-red-500' to={'#menu'}>Menu</li>
+              <li className='transition-all hover:text-red-500' to={'#about'}>About</li>
+              <li className='transition-all hover:text-red-500' to={'#contact'}>Contact</li>
+              <button className='px-4 py-2 text-white bg-red-500 rounded-lg'>Order Now</button>
             </ul>
           </div>
         </div>

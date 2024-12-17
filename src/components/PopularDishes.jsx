@@ -17,7 +17,7 @@ const PopularDishes = () => {
         {
             id:2,
             pizza: pizza2,
-            name: "pan Pizza",
+            name: "Neapolitan Pizza",
             desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo laudantium hic voluptas.",
             rating: 4
         },

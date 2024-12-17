@@ -54,7 +54,7 @@ function Header() {
           <div href="/" className="flex items-center gap-1 font-semibold text-primary">
             <img src={chili} className='w-10'/>
             <div className='text-xl font-bold text-red-500'>
-              Spicy
+              Food
               <span className="font-semibold text-gray-800">Bites</span>
             </div>
           </div>
